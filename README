@@ -518,6 +518,7 @@ ASIC only options:
 --bitburner-fury-voltage <arg> Set BitBurner Fury core voltage, in millivolts
 --bitburner-voltage <arg> Set BitBurner (Avalon) core voltage, in millivolts
 --bitmine-a1-options <ref_clk>:<sys_clk>:<spi_clk>:<max_chip>
+--bm1370-dev <path>   Set BM1370 device path (default: /dev/ttyUSB0)
 --bxf-temp-target <arg> Set target temperature for BXF devices (default: 82)
 --bxm-bits <arg>    Set BXM bits for overclocking (default: 50)
 --compac-freq <arg> Set GekkoScience Compac frequency in MHz, range 100-500 (default: 150.0)
