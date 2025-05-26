@@ -1,11 +1,13 @@
 # Repository Structure
 
+```shell
 .
 └─ cgminer/
    ├─ reference/              (read-only; reference implementations only)
    │   ├─ ESP-Miner/          – software for controlling ASIC chips with an ESP32
    │   └─ bitaxeGamma/        – hardware source for a single-ASIC mining machine
    └─ ...                     (editable source code)
+```
 
 ## Instructions
 
