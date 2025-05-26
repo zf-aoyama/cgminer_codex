@@ -1052,6 +1052,9 @@ extern char *opt_bab_options;
 #ifdef USE_BITMINE_A1
 extern char *opt_bitmine_a1_options;
 #endif
+#ifdef USE_BM1370
+extern char *opt_bm1370_dev;
+#endif
 #ifdef USE_DRAGONMINT_T1
 extern char *opt_dragonmint_t1_options;
 extern int opt_T1Pll[];

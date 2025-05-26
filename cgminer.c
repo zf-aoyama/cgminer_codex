@@ -337,6 +337,9 @@ char *opt_bitmain_dev;
 #endif
 char *opt_bitmain_voltage = BITMAIN_VOLTAGE_DEF;
 #endif
+#ifdef USE_BM1370
+char *opt_bm1370_dev = "/dev/ttyUSB0";
+#endif
 #ifdef USE_HASHFAST
 static char *opt_set_hfa_fan;
 #endif
@@ -1743,13 +1746,18 @@ static struct opt_table opt_config_table[] = {
 		     opt_set_charp, NULL, &opt_bitmain_voltage,
 		     "Set bitmain voltage (default: "BITMAIN_VOLTAGE_DEF")"),
 #ifndef USE_ANT_S3
-	OPT_WITH_ARG("--bitmain-dev",
-		     opt_set_charp, NULL, &opt_bitmain_dev,
-		     "Set bitmain device"),
+        OPT_WITH_ARG("--bitmain-dev",
+                     opt_set_charp, NULL, &opt_bitmain_dev,
+                     "Set bitmain device"),
 #endif
-	OPT_WITHOUT_ARG("--bitmainbeeper",
-			opt_set_bool, &opt_bitmain_beeper,
-			"Set bitmain beeper ringing"),
+#ifdef USE_BM1370
+        OPT_WITH_ARG("--bm1370-dev",
+                     opt_set_charp, NULL, &opt_bm1370_dev,
+                     "Set BM1370 device path"),
+#endif
+        OPT_WITHOUT_ARG("--bitmainbeeper",
+                        opt_set_bool, &opt_bitmain_beeper,
+                        "Set bitmain beeper ringing"),
 	OPT_WITHOUT_ARG("--bitmain-checkall",
 			opt_set_bool, &opt_bitmain_checkall,
 			opt_hidden),
