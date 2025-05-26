@@ -137,8 +137,10 @@ CGMiner specific configuration options:
   --enable-bitfury        Compile support for BitFury ASICs (default disabled)
   --enable-bitmine_A1     Compile support for Bitmine.ch A1 ASICs (default
                           disabled)
+  --enable-bm1370         Compile support for BM1370 ASICs (default
+                          disabled)
   --enable-blockerupter   Compile support for ASICMINER BlockErupter Tube/Prisma
-  			  (default disabled)
+                          (default disabled)
   --enable-cointerra      Compile support for Cointerra ASICs (default disabled)
   --enable-drillbit       Compile support for Drillbit BitFury ASICs (default
                           disabled)
