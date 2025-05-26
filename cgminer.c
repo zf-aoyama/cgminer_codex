@@ -305,6 +305,9 @@ char *opt_bab_options = NULL;
 #ifdef USE_BITMINE_A1
 char *opt_bitmine_a1_options = NULL;
 #endif
+#ifdef USE_BM1370
+char *opt_bm1370_dev = "/dev/ttyUSB0";
+#endif
 #ifdef USE_DRAGONMINT_T1
 #include "dragonmint_t1.h"
 char *opt_dragonmint_t1_options = NULL;
@@ -1771,14 +1774,19 @@ static struct opt_table opt_config_table[] = {
 			opt_hidden),
 #endif
 #ifdef USE_BITMINE_A1
-	OPT_WITH_ARG("--bitmine-a1-options",
-		     opt_set_charp, NULL, &opt_bitmine_a1_options,
-		     "Bitmine A1 options ref_clk_khz:sys_clk_khz:spi_clk_khz:override_chip_num"),
+        OPT_WITH_ARG("--bitmine-a1-options",
+                     opt_set_charp, NULL, &opt_bitmine_a1_options,
+                     "Bitmine A1 options ref_clk_khz:sys_clk_khz:spi_clk_khz:override_chip_num"),
+#endif
+#ifdef USE_BM1370
+        OPT_WITH_ARG("--bm1370-dev",
+                     opt_set_charp, NULL, &opt_bm1370_dev,
+                     "Set BM1370 device path"),
 #endif
 #ifdef USE_BITFURY
-	OPT_WITH_ARG("--bxf-bits",
-		     set_int_32_to_63, opt_show_intval, &opt_bxf_bits,
-		     "Set max BXF/HXF bits for overclocking"),
+        OPT_WITH_ARG("--bxf-bits",
+                     set_int_32_to_63, opt_show_intval, &opt_bxf_bits,
+                     "Set max BXF/HXF bits for overclocking"),
 	OPT_WITH_ARG("--bxf-debug",
 		     set_int_0_to_4, opt_show_intval, &opt_bxf_debug,
 		    "BXF: Debug all USB I/O, > is to the board(s), < is from the board(s)"),
