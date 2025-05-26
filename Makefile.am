@@ -135,6 +135,10 @@ cgminer_SOURCES += dm_fan_ctrl.c
 cgminer_SOURCES += dm_compat.c
 endif
 
+if HAS_BM1370
+cgminer_SOURCES += driver-bm1370.c driver-bm1370.h
+endif
+
 if HAS_DRILLBIT
 cgminer_SOURCES += driver-drillbit.c driver-drillbit.h
 endif

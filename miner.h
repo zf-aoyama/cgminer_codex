@@ -257,9 +257,10 @@ static inline int fsync (int fd)
 	DRIVER_ADD_COMMAND(bitfury16) \
 	DRIVER_ADD_COMMAND(bitmineA1) \
 	DRIVER_ADD_COMMAND(blockerupter) \
-	DRIVER_ADD_COMMAND(cointerra) \
-	DRIVER_ADD_COMMAND(dragonmintT1) \
-	DRIVER_ADD_COMMAND(hashfast) \
+        DRIVER_ADD_COMMAND(cointerra) \
+        DRIVER_ADD_COMMAND(dragonmintT1) \
+        DRIVER_ADD_COMMAND(bm1370) \
+        DRIVER_ADD_COMMAND(hashfast) \
 	DRIVER_ADD_COMMAND(drillbit) \
 	DRIVER_ADD_COMMAND(hashratio) \
 	DRIVER_ADD_COMMAND(icarus) \
