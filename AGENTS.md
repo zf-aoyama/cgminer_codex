@@ -1,6 +1,6 @@
 # Repository Structure
 
-```shell
+```
 .
 └─ cgminer/
    ├─ reference/              (read-only; reference implementations only)
