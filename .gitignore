@@ -4,6 +4,8 @@ nbproject
 jansson.pc
 compat/jansson-2.9/src/jansson_config.h
 compat/jansson-2.9/jansson_private_config.h
+compat/jansson-2.9/jansson_private_config.h.in
+compat/jansson-2.9/test-driver
 libtool
 ltmain.sh
 libtool.m4
