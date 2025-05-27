@@ -1080,6 +1080,9 @@ extern bool opt_bitmain_beeper;
 extern bool opt_bitmain_tempoverctrl;
 extern char *opt_bitmain_voltage;
 #endif
+#ifdef USE_BM1370
+extern char *opt_bm1370_dev;
+#endif
 #ifdef USE_MINION
 extern int opt_minion_chipreport;
 extern char *opt_minion_cores;
