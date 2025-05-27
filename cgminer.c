@@ -123,6 +123,10 @@ char *curly = ":D";
 #include "driver-btm-soc.h"
 #endif
 
+#ifdef USE_BM1370
+#include "driver-bm1370.h"
+#endif
+
 
 #ifdef USE_COINTERRA
 #include "driver-cointerra.h"
@@ -336,6 +340,9 @@ static bool opt_bitmain_homemode;
 char *opt_bitmain_dev;
 #endif
 char *opt_bitmain_voltage = BITMAIN_VOLTAGE_DEF;
+#endif
+#ifdef USE_BM1370
+char *opt_bm1370_dev = BM1370_DEFAULT_DEV;
 #endif
 #ifdef USE_HASHFAST
 static char *opt_set_hfa_fan;
@@ -1766,13 +1773,18 @@ static struct opt_table opt_config_table[] = {
 	OPT_WITHOUT_ARG("--bitmain-notempoverctrl",
 			opt_set_bool, &opt_bitmain_notempoverctrl,
 			opt_hidden),
-	OPT_WITHOUT_ARG("--bitmain-homemode",
-			opt_set_bool, &opt_bitmain_homemode,
-			opt_hidden),
+        OPT_WITHOUT_ARG("--bitmain-homemode",
+                        opt_set_bool, &opt_bitmain_homemode,
+                        opt_hidden),
+#endif
+#ifdef USE_BM1370
+        OPT_WITH_ARG("--bm1370-dev",
+                     opt_set_charp, NULL, &opt_bm1370_dev,
+                     "Set BM1370 device path"),
 #endif
 #ifdef USE_BITMINE_A1
-	OPT_WITH_ARG("--bitmine-a1-options",
-		     opt_set_charp, NULL, &opt_bitmine_a1_options,
+        OPT_WITH_ARG("--bitmine-a1-options",
+                     opt_set_charp, NULL, &opt_bitmine_a1_options,
 		     "Bitmine A1 options ref_clk_khz:sys_clk_khz:spi_clk_khz:override_chip_num"),
 #endif
 #ifdef USE_BITFURY
