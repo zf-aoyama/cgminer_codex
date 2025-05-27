@@ -311,6 +311,7 @@ Options for both config file and command line:
 --bitmain-workdelay <arg> Set bitmain work delay (ms) 0-100
 --bitmain-voltage <arg> Set bitmain voltage - S2/S3 only
 --bitmain-dev <arg> Set bitmain device - S2 only
+--bm1370-dev <arg> Set BM1370 device path (default: /dev/ttyUSB0)
 --bitmainbeeper     Set bitmain beeper ringing
 --bitmaintempoverctrl Set bitmain stop runing when temprerature is over 80 degree Celsius
 --bxf-bits <arg>    Set max BXF/HXF bits for overclocking (default: 54)
